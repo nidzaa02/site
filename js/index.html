@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script
+   src="https://code.jquery.com/jquery-3.4.1.js"
+   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"> </script>
+   
+   
+
+
+   
+</head>
+<body>
+
+<!--Navigacija-->
+<div class="topNav" id="mytop">
+<ul class="ultopNav">
+  <div class="left">
+ <li id="home" class="active"><a href="#">Home</a></li> 
+ <li id="about"><a href="#">About</a></li> 
+  </div>
+<div class="center">
+<li><a href="#">L O G O</a></li>
+</div>
+<div class="right">
+  <a href="#">More<i class="fa fa-angle-double-right" style="margin-left: 3px;"></i></a>
+  <a href="#">Log In<i class="fa fa-angle-double-right" style="margin-left: 3px;"></i></a>
+
+</div>
+
+
+</ul>
+
+<div class="mobnav">
+  <a href="#"id="dugme"><i class="fa fa-bars"></i></a>
+  <a href="#" id="zatvori"><i class="fa fa-close"></i></a>
+</div>
+</div>
+
+<!--Navigacija KRAJ-->
+
+<!--Cover Page-->
+
+<div class="cover bg">
+
+<h1>It's all about <span>You</span>.</h2>
+<h4>Push Yourself to <span>Work</span> Stronger.</h4>
+<label for="search"></label>
+<div id="div1">
+<input type="text" name="search" id="search" placeholder="Search..">
+
+
+</div>
+
+<!--Cover Page KRAJ-->
+
+
+
+   <script>
+
+
+   function mojaFunkcija() {
+  
+       var a = parseInt(document.querySelector("#value1").value);
+       var b = parseInt(document.querySelector("#value2").value);
+       var op = document.querySelector("#operator").value;
+       var calculate;
+       
+       if(op == "plus") {
+    
+         calculate = a + b;
+
+       }
+      else if(op == "minus") {
+    
+    calculate = a - b;
+
+  }
+  else if(op == "puta") {
+    
+    calculate = a * b;
+
+  }
+  else if(op == "podeljeno") {
+    
+    calculate = a / b;
+
+  }
+
+
+  document.getElementById("rezultat").innerHTML= calculate;
+  
+
+
+
+   }
+
+
+
+
+
+ 
+
+
+</script>
+
+<script>
+
+
+$(document).ready(function(){
+
+  $("#dugme").click(function(){
+
+    $("ul").toggle();
+    $(this).hide();
+    $("#zatvori").show(100);
+  });
+
+  $("#zatvori").click(function(){
+
+
+    $("ul").hide(100);
+    $(this).hide();
+    $("#dugme").show();
+  })
+
+});
+
+</script>
+    
+</body>
+</html>
